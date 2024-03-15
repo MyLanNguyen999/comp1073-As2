@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet"/>
     <link href="css/styles.css" rel="stylesheet"/>
-    <script src="js/script.js" defer></script>
+    <script src="js/script1.js" defer></script>
     <title> Fresh Smoothie On Your Way
     </title>
 </head>
 <body>
     <h1> Fresh Smoothie On Your Way </h1>
     <h2> Add your smoothie ingredient below and we will get it ready for you! </h2>
-    <form action="#" method="post">
+    <fieldset>
+        <legend> Order </legend>
+        <form action="order-confirm.html" method="post">
+        <form>
         <section>
-        <label for="size"> Size </label>
-        <select name="size" id="size">
+        <label for="size"> Size* </label>
+        <select name="size" id="size" required>
+            <option value="" disabled selected>Select size</option>
             <option value="small"> Small </option>
             <option value="medium"> Medium </option>
             <option value="large"> Large </option>
@@ -23,25 +27,34 @@
     </section>
     
     <section>
-        <label for="includeMilk"> Include milk? </label>
-        <select name="includeMilk" id="includeMilk">
+        <label for="includeMilk"> Milk* </label>
+        <select name="includeMilk" id="includeMilk" required>
+            <option value="" disabled selected> Select</option>
             <option value="yes"> Yes </option>
             <option value="no"> No </option>
         </select>
     </section>
 
     <section>
-        <label for="fruitChoice">Fruit Choice</label>
-        <input type="text" id="fruitChoice" name="fruitChoice">
+        <label for="fruitChoice">Fruit Choice*</label>
+        <select name="fruitChoice" id="fruitChoice" required>
+            <option value="" disabled selected>Select fruit</option>
+            <option value="Mango"> Mango </option>
+            <option value="Strawberry"> Strawberry </option>
+            <option value="Orange"> Orange </option>
+            <option value="Vanilla"> Vanilla </option>
+            <option value="Chocolate"> Chocolate </option>
+        </select>
     </section>
-    <button> Order Now </button>
+    </fieldset>
+    <button id="reviewButton"> Review </button>
+    <fieldset>
+        <legend>Confirmation</legend>
+        <p id="output">Your order detail will show up here.</p>
+        
+    </fieldset>
+    <button type="submit"> Order </button>
     </form>
     </section>
-        
-
-        
-
-    
-    
 </body>
 </html>

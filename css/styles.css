@@ -1,3 +1,6 @@
 html {
     margin: 80px;
 }
+li {
+    text-transform: capitalize;
+}
