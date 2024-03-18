@@ -13,6 +13,14 @@
     <h1> Fresh Smoothie On Your Way </h1>
     <h2> Add your smoothie ingredient below and we will get it ready for you! </h2>
     <fieldset>
+        <legend> Your information </legend>
+        <label for="firstName" > First Name</label>
+        <input type="text" for="firstName" id="firstName">
+        </br>
+        <label for="lastName"> Last Name</label>
+        <input type="text" for="lastName" id="lastName">
+    </fieldset>
+    <fieldset>
         <legend> Order </legend>
         <form action="order-confirm.html" method="post">
         <form>
@@ -46,8 +54,10 @@
             <option value="Chocolate"> Chocolate </option>
         </select>
     </section>
+    <p> <em> Click "Review" below to check your order. </em> </p>
     </fieldset>
     <button id="reviewButton"> Review </button>
+    
     <fieldset>
         <legend>Confirmation</legend>
         <p id="output">Your order detail will show up here.</p>
