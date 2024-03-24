@@ -11,6 +11,12 @@ h1, h2 {
 fieldset {
     margin-top: 5px;
     margin-bottom: 5px;
+    border-color: brown;
+    box-shadow: 0.5px 1px 3px 1px lightgray;
+}
+legend {
+    font-weight: bold;
+    color:brown;
 }
 input, select {
     margin-top: 3px;
