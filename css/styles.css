@@ -1,3 +1,7 @@
+* {
+    font-family: "Tauri", sans-serif;
+    color: #5f7726;
+}
 html {
     margin: 80px;
     width: 45%;
@@ -15,13 +19,20 @@ img {
     height: 200px;
 }
 fieldset {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 5px;
     border-color: #5f7726;
     box-shadow: 0.5px 1px 3px 1px lightgray;
 }
+fieldset:nth-of-type(2) {
+    margin-top: 30px;
+}
+fieldset:nth-of-type(3) {
+    margin-top: 30px;
+}
 legend {
-    font-weight: bold;
+    font-size: 18px;
+    font-weight:bolder;
     color:#5f7726;
 }
 input, select {
