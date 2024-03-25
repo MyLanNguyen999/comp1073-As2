@@ -1,9 +1,10 @@
 // * grab output id from html
 const output = document.querySelector('#output');
+
 // * grab the aside element from html
 const aside = document.querySelector("aside");
 
-// * Define the Smoothie class
+// * define the Smoothie class
 class Smoothie {
     constructor(firstName, lastName, size, includeMilk, fruitChoice) {
         this.firstName = firstName;
@@ -27,17 +28,17 @@ class Smoothie {
 // * create element for image
 let image = document.createElement("img");
 
-// * Function to handle form submission
+// * create function to handle form submission on "review" button
 function orderSmoothie(event) {
     event.preventDefault();
-    // * Grab the current values of the form elements
+    // * grab the current values of the form elements
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value; 
     let size = document.getElementById("size").value;
     let includeMilk = document.getElementById("includeMilk").value;
     let fruitChoice = document.getElementById("fruitChoice").value;
 
-    // * Check if any required field is empty
+    // * check if any required field is empty
         if (firstName === "" || 
             lastName === "" || 
             size === "" || 
@@ -49,8 +50,8 @@ function orderSmoothie(event) {
 
         } else {
 
-            // * If all required fields are filled out, proceed with the review
-            // * Create a Smoothie object with the user's selections
+            // * if all required fields are filled out, showcase the order info
+            // * create a Smoothie object with the user's selections
             let mySmoothie = new Smoothie(firstName, lastName, size, includeMilk, fruitChoice);
 
             // * check the fruit choice and show smoothie image accordingly
@@ -78,8 +79,6 @@ function orderSmoothie(event) {
                 }
 }
 
-// * Add event listener to the Order button to trigger the orderSmoothie function
+// * add event listener to the Order button to trigger the orderSmoothie function
 document.getElementById("reviewButton").addEventListener("click", orderSmoothie);
 
-// * Grab the <aside> element from html for showing the image
-// const smoothieImage = document.querySelector("aside");
